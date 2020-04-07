@@ -1,8 +1,7 @@
 import Phaser from "phaser";
 import logoImg from "./assets/logo.png";
 
-const WIDTH = 800;
-const HEIGHT = 600;
+import { WIDTH, HEIGHT } from './config';
 
 class ExampleScene extends Phaser.Scene {
 
@@ -33,6 +32,10 @@ const config = {
   parent: "phaser-example",
   width: WIDTH,
   height: HEIGHT,
+  scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH
+  },
   scene: [ExampleScene]
 };
 
